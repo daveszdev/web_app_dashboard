@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="normalize.css">
     <title>WebApp Dashboard</title>
   </head>
-  <body class="grid-container">
-    <header class="header">
+  <body="class-container">
+    <!-- header area start -->
+    <header class="header grid">
       <h1>YourApp&trade;</h1>
 
       <div class="bell-icon">
@@ -20,14 +21,14 @@
         </div>
       </div>
 
-      <div class="member-jane">
+      <div class="member-main">
         <img src="images/member-1.jpg" alt="">
         <h3>Jane Sullivan</h3>
       </div>
 
     </header>
-
-    <nav cladd="navigation" id="sidebar-nav">
+    <!-- header area end -->
+    <nav class="navigation" id="sidebar-nav">
       <a href="index.html">
         <img src="icons/icon-dashboard.svg" alt="Dashboard icon">
       </a>
@@ -86,7 +87,7 @@
       </section>
 
       <!-- bar graph -->
-      <section class="daily">
+      <section id="daily">
         <h3>Daily Traffic</h3>
         <div class="widget-container-half">
           <!-- element bar graph will attach to -->
@@ -102,7 +103,7 @@
         </div>
       </section>
 
-      <section class="social-stats">
+      <section id="social-stats">
         <h3>Social Stats</h3>
         <div class="widget-container-full">
           <div class="social-container">
@@ -110,7 +111,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="red" d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"/></svg>
             </div>
             <div class="social-text">
-              <p>Twitter</p>
+              <p class="">Twitter</p>
               <p>10,345</p>
             </div>
           </div>
@@ -137,7 +138,7 @@
 
       <section class="members">
         <h3>New Members</h3>
-        <div class="widget-container-half">
+        <div class="widget-container-half grid">
           <div class="members-container">
             <img src="images/member-3.jpg" class="profile-image" alt="Member">
             <div class="members-text">
@@ -212,21 +213,22 @@
       </section>
 
       <!-- message box -->
-      <section class="message">
+      <section id="contact">
         <h3>Message User</h3>
-        <form class="widget-container-half">
-          <input type="text" placeholder="Search for user" class="form-field" id="userField">
-          <textarea  placeholder="Message for user" class="form-area" id="messageField"></textarea>
-          <button class="button-primary" id="send">Send</button>
+        <form>
+          <input type="text" placeholder="Search for User">
+          <textarea placeholder="Message for User"></textarea>
+          <button class="button">SEND</button>
         </form>
       </section>
+
 
       <!-- settings box -->
       <section class="settings">
         <h3>Settings</h3>
         <div class="widget-container-half">
           <label class="switch-light switch-ios pop" onclick="">
-            <input type="checkbox"><strong>Send Email Notifications</strong>
+            <input type="checkbox"><p>Send Email Notifications</p>
             <span class="slider round">
               <span>Off</span>
               <span>On</span>
@@ -234,7 +236,7 @@
             </span>
           </label>
           <label class="switch-light switch-ios pop" onclick="">
-            <input type="checkbox"><strong>Set Profile to Public</strong>
+            <input type="checkbox"><p>Set Profile to Public</p>
             <span class="slider round">
               <span>Off</span>
               <span>On</span>
@@ -242,6 +244,7 @@
             </span>
           </label>
 
+          <div class="select">
           <select class="select-zone" id="timezone">
             <option disabled selected>Select a Timezone</option>
             <option>UTC-11: Samoa Standard Time (ST)</option>
@@ -249,6 +252,7 @@
             <option>UTC-9: Alaska Standard Time (AKT)</option>
             <option>UTC−8: Pacific Standard Time (PT)</option>
           </select>
+        </div>
           <div class="settings-button" >
             <button class="button-primary" id="save">Save</button>
             <button class="button-disabled" id="cancel">Cancel</button>
