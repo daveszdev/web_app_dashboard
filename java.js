@@ -1,4 +1,4 @@
-const alertBanner = document.getElementById('alert');
+const alertPop = document.getElementById('alert');
 const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
@@ -6,8 +6,8 @@ const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
-/*ALERT NOTIFICATION*/
-alertBanner.innerHTML =
+
+alertPop.innerHTML =
 	`
 	<div class="alert-banner">
 		<p><strong>Alert: </strong>new member joined.</p>
@@ -16,12 +16,12 @@ alertBanner.innerHTML =
 	`
 ;
 
-alertBanner.addEventListener('click', e => {
-	alertBanner.style.display = 'none';
+alertPop.addEventListener('click', e => {
+	alertPop.style.display = 'none';
 });
 
 
-/*LINE CHART*/
+
 let trafficData = {
 	labels: [
 		'',
@@ -91,11 +91,6 @@ let trafficChart = new Chart(trafficCanvas, {
 });
 
 
-/*LINE CHART BUTTONS*/
-
-
-
-/*BAR CHART*/
 let dailyData = {
 	labels: [
 		'S',
@@ -145,7 +140,6 @@ let dailyChart = new Chart(dailyCanvas, {
 });
 
 
-/*DOUGHNUT CHART*/
 let mobileData = {
 	labels: [
 		'Phones',
@@ -192,7 +186,7 @@ let mobileChart = new Chart(mobileCanvas, {
 });
 
 
-/*MESSAGE*/
+
 send.addEventListener('click', () => {
 	if (user.value === '' && message.value === '') {
 		alert('Please fill out the user and message fields before submiting');
